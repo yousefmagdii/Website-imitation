@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="C:\Users\mE\Desktop\Project\css\style.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+   <div class="container-fluid p-0">
+    <header style="background-color: #8b0e2a">
+        <div class="container">
+<nav class="navbar navbar-expand-lg  ">
+<div class="navbar-brand mr-auto w-25"><img src="images/logo(1).png" width="160px"  height="60px" alt=""></div>
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+
+ <div class="navbar-nav ml-auto" >
+ <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+     <a class="nav-item nav-link active" href="#home" >HOME <span class="sr-only">(current)</span></a>
+     <a class="nav-item nav-link" href="#about">ABOUT</a>
+   <a class="nav-item nav-link" href="#services">SERVICES</a>
+    <a class="nav-item nav-link" href="#ourcustomers">OUR CUSTOMERS</a>
+    <a class="nav-item nav-link" href="#contactus">CONTACT US</a>
+
+</div>
+</div>
+
+</header>
+
+
+
+<!--end of header -->
+<!--start of banner -->
+<div id="home"class="image">
+  <img src="images/poster.jpg" alt="" width="100%">
+</div>
+<!--end of banner-->
+<div class="container mt-5">
+<!--start of about us -->
+<div id="about"class="row">
+<div class="col-6">
+<h2 class="color">About Us</h2>
+<hr>
+
+<h3 class="color mt-5">Who We Are</h3> <hr>
+<p>We are a group of specialists in different fields. We have 
+  a common objective, which is serving our customers professionally.
+   We seek to provide the best of what we can for our customers.
+    We attempt to demonstrate an ideal portrayal of effort.
+   Our customers are not limited to Egypt and the Arab world, our customers are from Europe, too.</p>
+
+
+  </div>
+  <div class="col-6">
+      <video controls="" controlslist="nodownload" poster="images/poster.jpg"width=600px>
+  			<source src="C:\Users\mE\Desktop\Project\kayan vid.mp4" type="video/mp4">
+		</video>
+  
+  </div>
+
+
+</div>
+</div>
+<!--start of our services-->
+<div id="services" style="background-color: #8b0e2a;">
+<div class="container">
+  <div class="space mt-5">
+  <h2 style="color:#dbdad7" >Our Services</h2> <hr>
+</div>
+  <div class="row white ">
+    <div class="col-3">
+        <i class="fas fa-chart-pie fa-2x"></i>
+        <h6>Social Media Mangement</h6>
+        <p> Administering social media pages and accounts; we are capable of administering different social media pages and accounts for individuals and companies professionally.</p>
+    </div>
+    <div class="col-3">
+        <i class="fas fa-chart-line fa-2x"></i>
+        <h6>E-Marketing</h6>
+        <p> We offer you paid advertisement campaigns on different social media sites and marketing it to guarantee, for the client, a widespread popularity and to attract more people and turn them into clients for your private company.</p>
+    </div>
+    <div class="col-3">
+        <i class="fas fa-rocket fa-2x"></i>
+        <h6>Train companies& institutions</h6>
+        <p> Due to our extended experience in the field, we have found that numerous companies and individuals need to train their marketing teams; So, we initiated a special department for training any company institution.</p>
+    </div>
+    <div class="col-3">
+        <i class="far fa-file-alt fa-2x"></i>
+                <h6>Consultancy
+          </h6>
+        <p> We provide marketing consultancy for companies and institutions. We have a deeply experienced team in problem solving for companies and individuals that face these problems while using and administering their accounts and pages on different social media sites.</p>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-3">
+          <i class="fas fa-camera fa-2x"></i>
+          <h6>Motion Graphic Videos</h6>
+          <p> We have top-notch motion graphic specialists with high quality and lesser costs..</p>
+      </div>
+      <div class="col-3">
+          <i class="fas fa-desktop fa-2x"></i>
+          <h6>Websites Creation
+            </h6>
+          <p> Our team is professionally capable of creating websites for individuals, companies, and large-scale institutions in and outside of Egypt.</p>
+      </div>
+      <div class="col-3">
+          <i class="fas fa-cogs fa-2x"></i>
+          <h6>App Development
+            </h6>
+          <p> You can create apps tailor made for you by our company’s team.</p>
+      </div>
+  </div>
+  
+</div>
+</div>
+<!--End of our services-->
+<!--Start of our Portfolio-->
+<div >
+
+  <div class="container">
+
+
+  
+    <h2 id="ourcustomers"class="mt-5 color">Our Portfolio</h2><hr>
+  
+    <div class="row mt-5 our">
+      
+
+ {{#each Mydata}}
+    <div class="col-lg-3 ">
+      <div class="card d-block w-100" style="width: 20rem; height:15rem;">
+        <ul class="list-group list-group-flush">
+        <img src="{{this.image}}" style="height:10rem">
+         
+          <a class="list-group-item"href="{{this.url}}" target="_blank">{{this.title}}<br>
+    {{this.nationality}}</a>
+        </ul>
+      </div>
+  </div>
+  {{/each}}
+
+
+ <!-- <div class="col-lg-3 ">
+      <div class="card d-block w-100" style="width: 20rem; height:15rem;">
+        <ul class="list-group list-group-flush">
+        <img src="C:\Users\mE\Desktop\Project\images\Kayan Digital Agency_files\15152710933731.jpg" style="height:10rem">
+         
+          <a class="list-group-item"href="https://www.facebook.com/amirmounirofficial/" target="_blank">Amir Mounir<br>
+    Egypt</a>
+        </ul>
+      </div>
+  </div>
+  <div class="col-lg-3 ">
+      <div class="card d-block w-100" style="width: 20rem; height:15rem;">
+        <ul class="list-group list-group-flush">
+        <img src="C:\Users\mE\Desktop\Project\images\Kayan Digital Agency_files\15221359095619.jpg" style="height:10rem">
+         
+          <a class="list-group-item"href="https://www.facebook.com/MakkahMob/"target="_blank">Makkah Mobile<br>
+    Egypt</a>
+        </ul>
+      </div>
+  </div>
+  <div class="col-lg-3 ">
+      <div class="card d-block w-100" style="width: 20rem; height:15rem;">
+        <ul class="list-group list-group-flush">
+        <img src="C:\Users\mE\Desktop\Project\images\Kayan Digital Agency_files\15152706951674.png" style="height:10rem">
+         
+          <a class="list-group-item"href="https://www.facebook.com/droosonline"target="_blank">Ahmed Abu Zaid<br>
+    Egypt</a>
+        </ul>
+      </div>
+  </div>
+
+    </div>
+    <div class="row mt-5 our ">
+      
+
+        <div class="col-lg-3 ">
+          <div class="card d-block w-100" style="width: 20rem; height:15rem;">
+            <ul class="list-group list-group-flush">
+            <img src="C:\Users\mE\Desktop\Project\images\Kayan Digital Agency_files\15152707905977.png" style="height:10rem">
+             
+              <a class="list-group-item"href="https://www.facebook.com/HussienElgoharyi/"target="_blank">Hussein Elgohary<br>
+        Egypt</a>
+            </ul>
+          </div>
+      </div>
+      <div class="col-lg-3 ">
+          <div class="card d-block w-100" style="width: 20rem; height:15rem;">
+            <ul class="list-group list-group-flush">
+            <img src="C:\Users\mE\Desktop\Project\images\Kayan Digital Agency_files\15152706032765.png" style="height:10rem">
+             
+              <a class="list-group-item"href="https://www.facebook.com/SheikhSaeedAlqadi/"target="_blank">Dr.Saeed Elqady<br>
+        London</a>
+            </ul>
+          </div>
+      </div>
+      <div class="col-lg-3 ">
+          <div class="card d-block w-100" style="width: 20rem; height:15rem;">
+            <ul class="list-group list-group-flush">
+            <img src="C:\Users\mE\Desktop\Project\images\Kayan Digital Agency_files\mi.jpg" style="height:10rem">
+             
+              <a class="list-group-item" href="https://www.facebook.com/Mohamed-ibraheem-495844257285914/"target="_blank">Mohamed Ibrahim<br>
+        Egypt</a>
+            </ul>
+          </div>
+      </div>
+      <div class="col-lg-3 ">
+          <div class="card d-block w-100" style="width: 20rem; height:15rem;">
+            <ul class="list-group list-group-flush">
+            <img src="C:\Users\mE\Desktop\Project\images\Kayan Digital Agency_files\15152706471530.png"class="ourimage" style="height:10rem">
+             
+              <a class="list-group-item" href="https://www.facebook.com/SherifShehataOfficial/"target="_blank">Sherif Shehata<br>
+        Egypt</a>
+            </ul>
+          </div>
+      </div>-->
+    
+        </div>
+        <div class="row">
+        <button type="button" class="btn btn-outline-danger btn-lg move mt-5" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Show More</button>
+
+
+      </div>
+        <div class="collapse" id="collapseExample">
+        
+     
+                <div class="row mt-5 our">
+      
+
+                    <div class="col-lg-3 ">
+                      <div class="card d-block w-100" style="width: 20rem; height:15rem;">
+                        <ul class="list-group list-group-flush">
+                        <img src="C:\Users\mE\Desktop\Project\images\Kayan Digital Agency_files\15152705300398.png" style="height:10rem">
+                         
+                          <a class="list-group-item"href="https://www.facebook.com/KEmotive/" target="_blank">Osama Elbahnsy<br>
+                    Egypt</a>
+                        </ul>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 ">
+                      <div class="card d-block w-100" style="width: 20rem; height:15rem;">
+                        <ul class="list-group list-group-flush">
+                        <img src="C:\Users\mE\Desktop\Project\images\Kayan Digital Agency_files\15152702402205.png" style="height:10rem">
+                         
+                          <a class="list-group-item"href="https://www.facebook.com/amirmounirofficial/" target="_blank">Yasser Qadhy<br>
+                    USA</a>
+                        </ul>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 ">
+                      <div class="card d-block w-100" style="width: 20rem; height:15rem;">
+                        <ul class="list-group list-group-flush">
+                        <img src="C:\Users\mE\Desktop\Project\images\Kayan Digital Agency_files\5.jpg" style="height:10rem">
+                         
+                          <a class="list-group-item"href="https://www.facebook.com/MakkahMob/"target="_blank">Alaa Hamed<br>
+                    Egypt</a>
+                        </ul>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 ">
+                      <div class="card d-block w-100" style="width: 20rem; height:15rem;">
+                        <ul class="list-group list-group-flush">
+                        <img src="C:\Users\mE\Desktop\Project\images\Kayan Digital Agency_files\4.png" style="height:10rem">
+                         
+                          <a class="list-group-item"href="https://www.facebook.com/MakkahMob/"target="_blank">Oranten Travel<br>
+                    Egypt</a>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+            
+      </div>
+  </div>
+</div>
+<!--End of our portfolio-->
+<div id="contactus" style="background-color: #8b0e2a;">
+    <div class="container white">
+      
+      <h2>Contact Us</h2><hr>
+      <div class="row color2">
+        <div class="col-4">
+
+        
+      <h6 class="mt-5">Contact Info</h6>
+     <p> <i class="fas fa-envelope"></i> info@kayan.com</p>
+     <p> <i class="fas fa-phone-alt"></i> 01030018919 - ‭01100717015‬</p>
+     <p> <i class="fas fa-map-marker-alt"></i> 2 Hussein Afifi St. Off Makram Ebaid St - Nasr City - Cairo‬</p>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.3284249719254!2d31.32661841446038!3d30.08477908186765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e2300a7e9e7%3A0xdf19e0d6f6193d1d!2sKayan+Coworking+Space!5e0!3m2!1sen!2seg!4v1564702706772!5m2!1sen!2seg" width="300" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+    
+    </div>
+    <div class="col-8" >
+
+        <form>
+            <div class="row">
+                <div class="form-group col-12 col-md-6">
+                    <input type="text" class="form-control" id="inputName" placeholder="Full Name" required="">
+                </div>
+                <div class="form-group col-12 col-md-6">
+                    <input type="text" class="form-control" id="inputPhone" placeholder="Phone Number" required="">
+                </div>
+                <div class="form-group col-12 ">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email Address" required="">
+                </div>
+                <div class="form-group col-12 ">
+                    <textarea placeholder="Message.." class="form-control" rows="5"></textarea>
+                </div>
+                <div class="form-group col-12">
+                    <button type="submit" class=" btn btn-outline-light btn-lg send color2">Send Message</button>
+                </div>
+            </div>
+        </form>
+
+
+
+    </div>
+
+
+
+  </div>
+</div>
+</div>
+<footer>
+<div class="container footer">
+Copyright © Kayan Agency</footer></div>
+</div>
+
+  <script src="https://kit.fontawesome.com/9f0a584d80.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
